@@ -1,0 +1,129 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+.theme-light {
+  --bg-background-primary: white;
+  --bg-background-secondary: #f7fafc;
+  --bg-background-tertiary: #e2e8f0;
+
+  --bg-background-form: white;
+
+  --text-copy-primary: #2d3748;
+  --text-copy-secondary: #4a5568;
+
+  --border-border-color-primary: white;
+}
+
+.theme-light .search-highlighted {
+  background: #f0fff4;
+}
+
+.theme-light .search-hover:hover {
+  background: #f0fff4;
+}
+
+.theme-dark .markdown-body {
+  color: #24292e;
+}
+
+.theme-dark .search-highlighted {
+  background: #2d3748;
+}
+
+.theme-dark .search-hover:hover {
+  background: #2d3748;
+}
+
+.theme-dark {
+  --bg-background-primary: #0d2438;
+  --bg-background-secondary: #102c44;
+  --bg-background-tertiary: #1e3951;
+
+  --bg-background-form: #1a202c;
+
+  --text-copy-primary: #cbd5e0;
+  --text-copy-secondary: #e2e8f0;
+
+  --border-border-color-primary: #1a202c;
+}
+
+.theme-dark .markdown-body {
+  color: #cbd5e0;
+}
+
+.theme-dark nav .active {
+  @apply border-white border-b;
+}
+
+.content-wrapper {
+  transition: background-color 0.25s;
+}
+
+.content-wrapper > header,
+.content-wrapper > main {
+  background-color: var(--bg-background-primary);
+}
+
+a {
+  @apply text-indigo-700 font-bold;
+}
+
+a:hover {
+  @apply text-indigo-800;
+}
+
+nav .active {
+  font-weight: bold;
+  @apply border-black border-b;
+}
+
+.container-inner {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .container-inner {
+    max-width: 760px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container-inner {
+    max-width: 860px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container-inner {
+    max-width: 1000px;
+  }
+}
+
+.checkmark {
+  height: 38px;
+  width: 38px;
+  background: url('../../static/check.svg') center center;
+  background-color: #4338ca;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  @apply pl-10;
+}
+
+.responsive-container {
+  position: relative;
+  overflow: hidden;
+  padding-top: 56.25%;
+}
+
+.responsive-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
